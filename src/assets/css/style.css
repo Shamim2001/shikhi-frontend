@@ -1,0 +1,593 @@
+/* 
+
+Project Name : Shikhi
+Author : Shamim Ahmed
+Version : 1.0
+Company: FixCafe NeteWork
+Description : Shikhi is an html5 responsive template.
+
+==============
+TABLE OF INDEX
+==============
+01.
+
+*/
+
+/* Defailt */
+body {
+  font-family: var(--kalpurush);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+._hr {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+a {
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.shikhi__btn {
+  display: inline-block;
+  padding: 6px 25px;
+  text-transform: capitalize;
+  border: 1px solid;
+  box-shadow: none;
+}
+.shikhi__btn i {
+  padding-left: 10px;
+  background-color: var(--primary) !important;
+}
+.active,
+.active i {
+  color: #fff;
+}
+.tab-content > .active {
+  color: #333;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: var(--primary);
+}
+.shikhi__btn_primary {
+  background-color: var(--primary);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.shikhi__btn_primary:hover {
+  background-color: transparent;
+  color: var(--primary);
+}
+.shikhi__section_title {
+  text-align: center;
+}
+.dots {
+  height: 5px;
+  width: 5px;
+  background: #757c8e;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0px 8px 2px 5px;
+}
+.mb-24 {
+  margin: 6rem 0;
+}
+.textcolor {
+  color: #333;
+}
+/* Variable */
+:root {
+  --primary: #1e73be;
+  --secondary: #202b31;
+  --grey: #585858;
+  --greybg: #f7f7f7;
+  --kalpurush: "Kalpurush";
+  --mont: "Mont Heavy DEMO";
+  --bebas: "Bebas Neue";
+  --textcolor: #333;
+}
+
+/* Header Area */
+section.shikhi__header_area {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+.shikhi__header_logo a {
+  font-size: 40px;
+  font-weight: 700;
+  color: #333;
+}
+.shikhi__header_menu ul li {
+  display: inline-block;
+}
+.shikhi__header_menu ul li a {
+  font-size: 1rem;
+  margin-left: 50px;
+  display: block;
+  color: #333;
+}
+
+/* Shikhi Courses Area */
+.shikhi__courses_area {
+  padding: 60px 0;
+}
+.courses_text {
+  padding-bottom: 2rem;
+}
+.shikhi__courses_release_list {
+  padding: 25px 0;
+}
+.shikhi__courses_release_list select {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+}
+.shikhi__courses_release_list select:focus-visible {
+  outline: 0;
+}
+.shikhi__courses_release_list select:focus {
+  border: 1px solid var(--primary);
+}
+
+/* Shikhi Card Area */
+.courses__card_body {
+  padding: 15px;
+}
+
+.courses_card {
+  border-radius: 0.5rem;
+}
+.courses_card img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.card_bookmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.wishlist_icon {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: var(--primary);
+  text-align: center;
+  font-size: 16px;
+  border-radius: 50%;
+  background: #757c8e61;
+}
+.wishlist_icon:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+.rating {
+  padding: 15px 0;
+}
+.rating i {
+  font-size: 1rem;
+  color: #ed9700;
+  margin-right: 3px;
+}
+.rating span {
+  font-size: 13px;
+  margin-left: 5px;
+}
+.card-icon {
+  font-size: 14px;
+}
+
+.card-icon span,
+.card-icon i {
+  margin-right: 0.6rem;
+}
+.card-text {
+  padding: 1rem 0;
+}
+.author {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding-top: 1rem;
+}
+.authon_icon {
+  text-transform: uppercase;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 1rem;
+  box-shadow: 0px 0px 3px 1px #85868b;
+}
+
+.authon_icon:hover {
+  color: #fff;
+}
+.author_name {
+  color: #333;
+  font-size: 14px;
+}
+.card_author {
+  display: flex;
+  align-items: center;
+  padding: 23px 0;
+}
+.card_author .author_name {
+  background-color: var(--primary);
+  padding: 6px;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+}
+.card_author span {
+  font-size: 14px;
+  color: #727272;
+  margin: 0 10px;
+}
+.courses__card_btn {
+  padding: 16px 20px;
+  border-top: 1px solid #ddd;
+}
+.courses__card_btn a {
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  background: #fff;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease;
+}
+.courses__card_btn a:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+/* Footer Area */
+section.shikhi__footer_area {
+  background-color: #333;
+  color: #f3f1f1;
+  padding: 40px 0;
+}
+.mmmm {
+  margin-left: 4rem;
+}
+
+.shikhi_footer_single_item p {
+  font-size: 25px;
+}
+
+.footer__single_item_text p {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.footer__single_item_text ul li {
+  padding: 3px 0;
+}
+.footer__single_item_text ul li a {
+  color: #f3f1f1;
+  font-size: 0.9rem;
+}
+.copy_right {
+  background-color: #333;
+  color: #f3f1f1;
+  padding: 20px 0px 0 30px;
+}
+
+/* Dashboard Css Start */
+
+.shikhi__profile_area {
+  padding: 60px 0;
+}
+.profile_content img {
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.profile_content {
+  display: flex;
+  align-items: center;
+}
+
+.profile_content_text span {
+  font-size: 20px;
+  color: #333;
+}
+
+.profile_content_text p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Dashboard content */
+.border_top {
+  border-top: 1px solid #ddd;
+}
+.dashboard_content {
+  border-right: 1px solid #ddd;
+  padding: 1rem 0;
+  height: 100%;
+}
+
+.dashboard_content ul li {
+  padding: 0.42rem 0;
+  margin: 0.3rem 0;
+  border-radius: 3px;
+}
+.dashboard_content ul li:hover {
+  background-color: #e8f1f8;
+}
+.dashboard_content ul li a {
+  padding-left: 1.5rem;
+  text-align: left;
+  color: #333;
+  font-weight: 500;
+}
+.icons {
+  font-size: 1.5rem;
+  margin-right: 0.4rem;
+  color: var(--primary);
+}
+.btn {
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+.active,
+.active i {
+  color: #fff;
+}
+.btn:focus {
+  box-shadow: none;
+}
+.dashboard-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+.dashboard__single_content {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dashboard_single_icon i {
+  font-size: 1.8rem;
+  color: var(--primary);
+  padding: 1rem;
+  background-color: #e8f1f8;
+  border-radius: 50%;
+}
+.dashboard_single_icon {
+  padding: 2rem;
+}
+.count {
+  padding: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.dashboard_progress_single_item {
+  border: 1px solid #ddd;
+  border-radius: 0.42rem;
+}
+.progress_content img {
+  width: 277px;
+  height: 185px;
+}
+.progress_text p {
+  font-size: 18px;
+  color: #333;
+}
+.progress_text span {
+  color: #757c8e;
+}
+.progress-bar {
+  background-color: var(--primary);
+}
+
+/* profile */
+.profile_single_item {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 3. Single Page  */
+
+.single__page_category_wishlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+.single_category {
+  font-size: 14px;
+  color: #7d8495;
+}
+.single_category a {
+  color: #333;
+  margin-left: 0.4rem;
+}
+.single_category a:hover,
+.single_wishlist a:hover {
+  color: #1e73be;
+}
+.single_wishlist a {
+  color: #7d8495;
+}
+.single_wishlist i {
+  margin-right: 0.4rem;
+}
+
+/* review & info */
+.is_active {
+  border-bottom: 2px solid var(--primary);
+}
+.info_items a {
+  color: #41454f;
+}
+.about_course {
+  padding: 2rem 0;
+}
+.about_course h3 {
+  font-size: 20px;
+}
+.learn_course ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.learn_course ul > li {
+  width: calc(50% - (1rem / 2));
+}
+.icon span {
+  color: #5c5c5d;
+  margin-right: 0.42rem;
+}
+.icon i {
+  color: #aeafb2;
+  margin-right: 0.42rem;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+/* review   */
+.main_review_area {
+  border: 1px solid #ddd;
+  border-radius: 0.42rem;
+  padding: 0;
+}
+.ratings i {
+  color: #ed9700;
+}
+.ratings_review_body {
+  display: flex;
+  padding: 2.5rem;
+}
+.stat_total_count {
+  text-align: center;
+}
+.stat_total_count h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.review_body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.7rem 0;
+}
+.review_comment_area {
+  display: flex;
+  padding: 2.5rem;
+}
+.comment_text span {
+  color: #757c8e;
+  font-size: 14px;
+}
+.display_visible {
+  visibility: visible;
+}
+
+/* Sidebar area */
+.single_page_sidebar_area,
+.sidebar_author_details {
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+}
+.sidebar-single_item {
+  padding: 2rem;
+  background-color: #f4f6f9;
+}
+
+.sidebar-single_item h4 {
+  font-size: 1.9rem;
+  padding: 0.9rem 0;
+}
+.sidebar_btn button {
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+}
+.sidebar_btn p {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 2rem;
+}
+.sidebar_card_footer {
+  padding: 2rem;
+}
+.sidebar_card_footer ul li {
+  color: #41454f;
+}
+.sidebar_card_footer ul li i {
+  margin-right: 0.42rem;
+}
+
+.author_logo {
+  padding: 10px 1rem;
+  background-color: var(--primary);
+  border-radius: 100%;
+  font-size: 1.3rem;
+  color: #fff;
+  box-shadow: 0px 0px 3px 1px #85868b;
+  margin-right: 1rem;
+}
+.widget-title h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+.auth_text {
+  color: #333;
+  font-weight: 700;
+}
+.auth_text:hover {
+  color: #333;
+  font-weight: 700;
+}
+
+/* ======= Course Start Page css start ============*/
+.toast:not(.show) {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 0%;
+}
+
+.toast-btn a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all .2s ;
+}
+.toast-btn a:hover {
+  background-color: #fff;
+  padding: 0.5rem;
+  color: var(--primary);
+  border-radius: 0.4rem;
+}

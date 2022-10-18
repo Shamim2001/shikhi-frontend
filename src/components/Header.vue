@@ -4,14 +4,14 @@
       <div class="row">
         <div class="col col-auto my-auto">
           <div class="shikhi__header_logo">
-            <a href="index.html">Shikhi</a>
+            <router-link to="/">Shikhi</router-link>
           </div>
         </div>
         <div class="col my-auto" style="text-align: right">
           <div class="shikhi__header_menu">
             <ul>
               <li><a href="dashboard.html">Dashboard</a></li>
-              <li><a href="single.html">Courses</a></li>
+              <li><router-link to="/about">About</router-link></li>
             </ul>
           </div>
         </div>

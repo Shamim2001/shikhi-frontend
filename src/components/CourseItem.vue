@@ -14,8 +14,7 @@
           <h5 class="card-title">{{ course.name }}</h5>
           <div class="card-text">
             <div class="card-icon">
-              <span><i class="fa fa-user-o"></i>816</span>
-              <span><i class="fa fa-user-o"></i>2h 23m</span>
+              <span><i class="fa fa-user-o"></i>{{ course.student.length }}</span>
             </div>
 
             <div class="author">

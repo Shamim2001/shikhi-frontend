@@ -1,6 +1,5 @@
 <template>
   <div class="">
-    <Header></Header>
 
     <!-- Course single -->
     <section class="shikhi__courses_area">
@@ -9,13 +8,13 @@
           <div class="col-sm-12">
             <div class="courses_text">
               <h2>Courses</h2>
-              <div class="" v-show="courses == ''">
-                <dot-loader
-                  :loading="loading"
-                  :color="color"
-                  :size="size"
-                ></dot-loader>
-              </div>
+            </div>
+            <div class="text-center" v-show="courses == ''">
+              <dot-loader
+                :loading="loading"
+                :color="color"
+                :size="size"
+              ></dot-loader>
             </div>
           </div>
         </div>
@@ -31,19 +30,17 @@
       </div>
     </section>
 
-    <Footer></Footer>
+
   </div>
 </template>
 
 <script>
 import DotLoader from "vue-spinner/src/DotLoader.vue";
 import CourseItem from "../components/CourseItem.vue";
-import Footer from "../components/Footer.vue";
-import Header from "../components/Header.vue";
 
 import http from "axios";
 export default {
-  components: { Header, Footer, CourseItem, DotLoader },
+  components: {  CourseItem, DotLoader },
   data() {
     return {
       courses: [],
@@ -51,10 +48,10 @@ export default {
   },
   methods: {
     async getCourses() {
-      await http.get("http://shikhi.test/api/courses").then((res) => {
+      await http.get("courses").then((res) => {
         setTimeout(() => {
           this.courses = res.data.courses;
-        }, 3000);
+        }, 1000);
       });
     },
   },

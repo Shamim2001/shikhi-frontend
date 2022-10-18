@@ -27,9 +27,8 @@
           </div>
         </div>
         <div class="courses__card_btn">
-          <a href="single.html" class="shikhi__btn shikhi__btn_primary"
-            >Enroll Course</a
-          >
+          <router-link :to="'/course/' + course.slug" class="shikhi__btn shikhi__btn_primary"
+            >Enroll Course</router-link>
         </div>
       </div>
     </div>

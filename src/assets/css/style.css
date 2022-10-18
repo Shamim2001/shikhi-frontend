@@ -102,9 +102,9 @@ a {
 }
 
 /* Header Area */
-section.shikhi__header_area {
+.shikhi__header_area {
   padding: 20px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgb(168, 161, 161);
 }
 .shikhi__header_logo a {
   font-size: 40px;
@@ -116,7 +116,7 @@ section.shikhi__header_area {
 }
 .shikhi__header_menu ul li a {
   font-size: 1rem;
-  margin-left: 50px;
+  margin: 0 1rem;
   display: block;
   color: #333;
 }

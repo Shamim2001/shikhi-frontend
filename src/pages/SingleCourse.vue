@@ -83,7 +83,7 @@
                     <div class="info_single-item">
                       <div class="about_course">
                         <h3>About Course</h3>
-                        {{ course.description }}
+                        <div v-html="course.description"></div>
                       </div>
 
                       <div class="learn_course">
@@ -93,20 +93,7 @@
                         <ul>
                           <li class="mb-2">
                             <span class="dots"></span>
-                            <span>You can create applications with views</span>
-                          </li>
-                          <li>
-                            <span class="dots fs"></span>
-                            <span
-                              >Can take data from API and show it in
-                              frontend</span
-                            >
-                          </li>
-                          <li>
-                            <span class="dots"></span>
-                            <span
-                              >Learn about different frontend lifecycles</span
-                            >
+                            <span>{{ course.lessons?.name }}</span>
                           </li>
                         </ul>
                       </div>
@@ -133,131 +120,6 @@
                               id="collapseOne"
                               class="accordion-collapse collapse show"
                               aria-labelledby="headingOne"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div class="accordion-body">
-                                <div class="">
-                                  <ul>
-                                    <li
-                                      class="d-flex justify-content-between icon mb-3"
-                                    >
-                                      <div>
-                                        <span
-                                          ><i class="fa fa-youtube-play"></i
-                                        ></span>
-                                        <span
-                                          >How to use Vue (using the CDN)</span
-                                        >
-                                      </div>
-                                      <div>
-                                        <span>09.18</span>
-                                        <span><i class="fa fa-lock"></i></span>
-                                      </div>
-                                    </li>
-                                    <li
-                                      class="d-flex justify-content-between icon mb-3"
-                                    >
-                                      <div>
-                                        <span
-                                          ><i class="fa fa-youtube-play"></i
-                                        ></span>
-                                        <span
-                                          >How to use Vue (using the CDN)</span
-                                        >
-                                      </div>
-                                      <div>
-                                        <span>09.18</span>
-                                        <span><i class="fa fa-lock"></i></span>
-                                      </div>
-                                    </li>
-                                    <li
-                                      class="d-flex justify-content-between icon mb-3"
-                                    >
-                                      <div>
-                                        <span
-                                          ><i class="fa fa-youtube-play"></i
-                                        ></span>
-                                        <span
-                                          >How to use Vue (using the CDN)</span
-                                        >
-                                      </div>
-                                      <div>
-                                        <span>09.18</span>
-                                        <span><i class="fa fa-lock"></i></span>
-                                      </div>
-                                    </li>
-                                    <li
-                                      class="d-flex justify-content-between icon mb-3"
-                                    >
-                                      <div>
-                                        <span
-                                          ><i class="fa fa-youtube-play"></i
-                                        ></span>
-                                        <span
-                                          >How to use Vue (using the CDN)</span
-                                        >
-                                      </div>
-                                      <div>
-                                        <span>09.18</span>
-                                        <span><i class="fa fa-lock"></i></span>
-                                      </div>
-                                    </li>
-                                    <li
-                                      class="d-flex justify-content-between icon mb-3"
-                                    >
-                                      <div>
-                                        <span
-                                          ><i class="fa fa-youtube-play"></i
-                                        ></span>
-                                        <span
-                                          >How to use Vue (using the CDN)</span
-                                        >
-                                      </div>
-                                      <div>
-                                        <span>09.18</span>
-                                        <span><i class="fa fa-lock"></i></span>
-                                      </div>
-                                    </li>
-                                    <li
-                                      class="d-flex justify-content-between icon mb-3"
-                                    >
-                                      <div>
-                                        <span
-                                          ><i class="fa fa-youtube-play"></i
-                                        ></span>
-                                        <span
-                                          >How to use Vue (using the CDN)</span
-                                        >
-                                      </div>
-                                      <div>
-                                        <span>09.18</span>
-                                        <span><i class="fa fa-lock"></i></span>
-                                      </div>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                              <button
-                                class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo"
-                                aria-expanded="false"
-                                aria-controls="collapseTwo"
-                              >
-                                <strong
-                                  >The Vue CLI (for Bigger Projects)</strong
-                                >
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseTwo"
-                              class="accordion-collapse collapse"
-                              aria-labelledby="headingTwo"
                               data-bs-parent="#accordionExample"
                             >
                               <div class="accordion-body">
@@ -665,8 +527,16 @@
               <div class="sidebar_card_footer">
                 <p>A course by</p>
                 <div class="d-flex align-items-center">
-                     <div class="me-3"><img :src="course.teacher.thumbnail" style="width: 40px; border-radius: 50%;" alt=""></div>
-                     <a href="single.html" class="auth_text">{{ course.teacher?.name }}</a>
+                  <div class="me-3">
+                    <img
+                      :src="course.teacher.thumbnail"
+                      style="width: 40px; border-radius: 50%"
+                      alt=""
+                    />
+                  </div>
+                  <a href="single.html" class="auth_text">{{
+                    course.teacher?.name
+                  }}</a>
                 </div>
               </div>
               <div class="_hr"></div>
@@ -701,9 +571,7 @@
                     <ul>
                       <li>
                         <span class="dots"></span>
-                        <span
-                          >{{ course.audience }}</span
-                        >
+                        <span>{{ course.audience }}</span>
                       </li>
                     </ul>
                   </div>
@@ -719,8 +587,10 @@
 
 <script>
 import axios from "axios";
+import DotLoader from "vue-spinner/src/DotLoader.vue";
 
 export default {
+  components: { DotLoader },
   data() {
     return {
       course: {},
@@ -728,6 +598,8 @@ export default {
   },
   async created() {
     const res = await axios.get("course/" + this.$route.params.slug);
+
+    console.log(res.data.course);
     if (!res.data.error) {
       this.course = res.data.course;
     }
